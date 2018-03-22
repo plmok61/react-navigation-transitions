@@ -1,0 +1,27 @@
+{
+  "name": "react-navigation-transitions",
+  "version": "1.0.0",
+  "description": "Custom transitions for react-navigation",
+  "author": "Phil Mok",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/plmok61/react-navigation-transitions.git"
+  },
+  "keywords": [
+    "react-native",
+    "react",
+    "react-navigation",
+    "navigation",
+    "transitions",
+    "animations"
+  ],
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/plmok61/react-navigation-transitions/issues"
+  },
+  "homepage": "https://github.com/plmok61/react-navigation-transitions#readme"
+}
