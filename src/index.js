@@ -74,3 +74,45 @@ export function fadeIn(duration = 300) {
     },
   };
 }
+
+export function zoomIn(duration = 300) {
+  return {
+    transitionSpec: {
+      duration,
+      easing: Easing.out(Easing.poly(4)),
+      timing: Animated.timing,
+      useNativeDriver: true,
+    },
+    screenInterpolator: ({ position, scene }) => {
+      const { index } = scene;
+
+      const scale = position.interpolate({
+        inputRange: [index - 1, index],
+        outputRange: [0, 1],
+      });
+
+      return { transform: [{ scale }] };
+    },
+  };
+}
+
+export function zoomOut(duration = 300) {
+  return {
+    transitionSpec: {
+      duration,
+      easing: Easing.out(Easing.poly(4)),
+      timing: Animated.timing,
+      useNativeDriver: true,
+    },
+    screenInterpolator: ({ position, scene }) => {
+      const { index } = scene;
+
+      const scale = position.interpolate({
+        inputRange: [index - 1, index],
+        outputRange: [10, 1],
+      });
+
+      return { transform: [{ scale }] };
+    },
+  };
+}

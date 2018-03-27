@@ -12,6 +12,10 @@ These functions are meant to be used as the `transitionConfig` with [react-navig
 
 `fadeIn`
 
+`zoomIn`
+
+`zoomOut`
+
 More will be added in future versions.
 
 ### Example
