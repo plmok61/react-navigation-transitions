@@ -17,7 +17,12 @@ export function fromLeft(duration = 300) {
         outputRange: [-initWidth, 0, 0],
       });
 
-      return { transform: [{ translateX }] };
+      const opacity = position.interpolate({
+          inputRange: [index - 1, index - 0.99, index],
+          outputRange: [0, 1, 1],
+        });
+
+      return { opacity, transform: [{ translateX }] };
     },
   };
 }
@@ -39,7 +44,12 @@ export function fromTop(duration = 300) {
         outputRange: [-initHeight, 0, 0],
       });
 
-      return { transform: [{ translateY }] };
+      const opacity = position.interpolate({
+          inputRange: [index - 1, index - 0.99, index],
+          outputRange: [0, 1, 1],
+        });
+
+      return { opacity, transform: [{ translateY }] };
     },
   };
 }

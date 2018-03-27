@@ -4,7 +4,7 @@
 `npm install react-navigation-transitions --save`
 
 ### Instructions
-These functions are meant to be used as the `transitionConfig` with `react-navigation`. So far it includes the following transitions:
+These functions are meant to be used as the `transitionConfig` with [react-navigation](https://reactnavigation.org/). So far it includes the following transitions:
 
 `fromLeft`
 
@@ -41,3 +41,5 @@ The default duration is 300 milliseconds but you can pass is a custom transition
 ```javascript
 transitionConfig: () => fromLeft(1000),
 ```
+
+The basis for these function can be found in the `react-navigation` docs [here](https://reactnavigation.org/docs/stack-navigator.html#modal-stacknavigator-with-custom-screen-transitions).
