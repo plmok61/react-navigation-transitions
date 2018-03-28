@@ -16,6 +16,11 @@ These functions are meant to be used as the `transitionConfig` with [react-navig
 
 `zoomOut`
 
+`flipY`
+
+`flipX`
+
+
 More will be added in future versions.
 
 ### Example
@@ -35,7 +40,7 @@ const appStack = StackNavigator(
   },
   {
     initialRouteName: 'ScreenA',
-    transitionConfig: fromLeft,
+    transitionConfig: () => fromLeft(),
   },
 );
 ```
