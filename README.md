@@ -25,10 +25,10 @@ More will be added in future versions.
 ### Example
 
 ```javascript
-import { StackNavigator } from 'react-navigation';
+import { createStackNavigator } from 'react-navigation';
 import { fromLeft } from 'react-navigation-transitions';
 
-const appStack = StackNavigator(
+const appStack = createStackNavigator(
   {
     ScreenA: {
       screen: ScreenA,
