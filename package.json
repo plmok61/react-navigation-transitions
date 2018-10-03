@@ -19,6 +19,11 @@
     "transitions",
     "animations"
   ],
+   "peerDependencies": {
+    "react": "*",
+    "react-native": "*",
+    "react-navigation": "*"
+  },
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/plmok61/react-navigation-transitions/issues"
