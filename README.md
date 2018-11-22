@@ -1,12 +1,16 @@
 # react-navigation-transitions
 
 ### Installation
+
 `npm install react-navigation-transitions --save`
 
 ### Instructions
+
 These functions are meant to be used as the `transitionConfig` with [react-navigation](https://reactnavigation.org/). So far it includes the following transitions:
 
 `fromLeft`
+
+`fromBottom`
 
 `fromTop`
 
@@ -25,22 +29,22 @@ More will be added in future versions.
 ### Example
 
 ```javascript
-import { createStackNavigator } from 'react-navigation';
-import { fromLeft } from 'react-navigation-transitions';
+import { createStackNavigator } from "react-navigation";
+import { fromLeft } from "react-navigation-transitions";
 
 const appStack = createStackNavigator(
   {
     ScreenA: {
-      screen: ScreenA,
+      screen: ScreenA
     },
     ScreenB: {
-      screen: ScreenB,
-    },
+      screen: ScreenB
+    }
   },
   {
-    initialRouteName: 'ScreenA',
-    transitionConfig: () => fromLeft(),
-  },
+    initialRouteName: "ScreenA",
+    transitionConfig: () => fromLeft()
+  }
 );
 ```
 
