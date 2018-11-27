@@ -1,6 +1,6 @@
 {
   "name": "react-navigation-transitions",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "description": "Custom transitions for react-navigation",
   "author": "Phil Mok",
   "main": "src/index.js",
@@ -19,7 +19,7 @@
     "transitions",
     "animations"
   ],
-   "peerDependencies": {
+  "peerDependencies": {
     "react": "*",
     "react-native": "*",
     "react-navigation": "*"
