@@ -50,6 +50,42 @@ The default duration is 300 milliseconds but you can pass is a custom transition
 transitionConfig: () => fromLeft(1000),
 ```
 
+## Adding transitions to specific screens
+
+In the example above, the same transition animation will be used for all screens within the
+navigator. The example below shows how to use different transitions for specific screens.
+
+Thank you to [SebLambla](https://github.com/SebLambla) for coming up with this great example.
+
+```javascript
+import { fromLeft, zoomIn, zoomOut } from 'react-navigation-transitions'
+
+const handleCustomTransition = ({ scenes }) => {
+  const prevScene = scenes[scenes.length - 2];
+  const nextScene = scenes[scenes.length - 1];
+
+  // Custom transitions go there
+  if (prevScene
+    && prevScene.route.routeName === 'ScreenA'
+    && nextScene.route.routeName === 'ScreenB') {
+    return zoomIn();
+  } else if (prevScene
+    && prevScene.route.routeName === 'ScreenB'
+    && nextScene.route.routeName === 'ScreenC') {
+    return zoomOut();
+  }
+  return fromLeft();
+}
+
+const PrimaryNav = createStackNavigator({
+  ScreenA: { screen: ScreenA },
+  ScreenB: { screen: ScreenB },
+  ScreenC: { screen: ScreenC },
+}, {
+  transitionConfig: (nav) => handleCustomTransition(nav)
+})
+```
+
 ## GIFS
 
 ### fromLeft
