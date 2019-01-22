@@ -10,6 +10,10 @@ These functions are meant to be used as the `transitionConfig` with [react-navig
 
 `fromTop`
 
+`fromRight`
+
+`fromBottom`
+
 `fadeIn`
 
 `zoomIn`
