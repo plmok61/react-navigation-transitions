@@ -1,4 +1,4 @@
-import { Animated, Easing } from 'react-native';
+import { Animated, Easing, Platform } from 'react-native';
 
 export function fromLeft(duration = 300) {
   return {
@@ -139,10 +139,15 @@ export function zoomIn(duration = 300) {
     },
     screenInterpolator: ({ position, scene }) => {
       const { index } = scene;
+      let start = 0;
+      
+      if (Platform.OS !== 'ios') {
+        start = 0.005
+      }
 
       const scale = position.interpolate({
         inputRange: [index - 1, index],
-        outputRange: [0, 1],
+        outputRange: [start, 1],
       });
 
       return { transform: [{ scale }] };
