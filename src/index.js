@@ -141,8 +141,8 @@ export function fadeOut(duration = 300) {
       const { index } = scene;
 
       const opacity = position.interpolate({
-        inputRange: [index - 1, index],
-        outputRange: [1, 0],
+        inputRange: [index - 1, index, index + 1],
+        outputRange: [0, 1, 0]
       });
 
       return { opacity };
