@@ -1,6 +1,6 @@
 {
   "name": "react-navigation-transitions",
-  "version": "1.0.10",
+  "version": "1.0.11",
   "description": "Custom transitions for react-navigation",
   "author": "Phil Mok",
   "main": "src/index.js",
