@@ -129,6 +129,27 @@ export function fadeIn(duration = 300) {
   };
 }
 
+export function fadeOut(duration = 300) {
+  return {
+    transitionSpec: {
+      duration,
+      easing: Easing.out(Easing.poly(4)),
+      timing: Animated.timing,
+      useNativeDriver: true,
+    },
+    screenInterpolator: ({ position, scene }) => {
+      const { index } = scene;
+
+      const opacity = position.interpolate({
+        inputRange: [index - 1, index, index + 1],
+        outputRange: [0, 1, 0]
+      });
+
+      return { opacity };
+    },
+  };
+}
+
 export function zoomIn(duration = 300) {
   return {
     transitionSpec: {
