@@ -1,6 +1,7 @@
 import { Animated, Easing, Platform } from 'react-native';
+import { TransitionConfig } from 'react-navigation';
 
-export function fromLeft(duration = 300) {
+export function fromLeft(duration: number = 300): TransitionConfig {
   return {
     transitionSpec: {
       duration,
@@ -18,16 +19,16 @@ export function fromLeft(duration = 300) {
       });
 
       const opacity = position.interpolate({
-          inputRange: [index - 1, index - 0.99, index],
-          outputRange: [0, 1, 1],
-        });
+        inputRange: [index - 1, index - 0.99, index],
+        outputRange: [0, 1, 1],
+      });
 
       return { opacity, transform: [{ translateX }] };
     },
   };
 }
 
-export function fromTop(duration = 300) {
+export function fromTop(duration: number = 300): TransitionConfig {
   return {
     transitionSpec: {
       duration,
@@ -45,16 +46,16 @@ export function fromTop(duration = 300) {
       });
 
       const opacity = position.interpolate({
-          inputRange: [index - 1, index - 0.99, index],
-          outputRange: [0, 1, 1],
-        });
+        inputRange: [index - 1, index - 0.99, index],
+        outputRange: [0, 1, 1],
+      });
 
       return { opacity, transform: [{ translateY }] };
     },
   };
 }
 
-export function fromRight(duration = 300) {
+export function fromRight(duration: number = 300): TransitionConfig {
   return {
     transitionSpec: {
       duration,
@@ -72,16 +73,16 @@ export function fromRight(duration = 300) {
       });
 
       const opacity = position.interpolate({
-          inputRange: [index - 1, index - 0.99, index],
-          outputRange: [0, 1, 1],
-        });
+        inputRange: [index - 1, index - 0.99, index],
+        outputRange: [0, 1, 1],
+      });
 
       return { opacity, transform: [{ translateX }] };
     },
   };
 }
 
-export function fromBottom(duration = 300) {
+export function fromBottom(duration: number = 300): TransitionConfig {
   return {
     transitionSpec: {
       duration,
@@ -99,16 +100,16 @@ export function fromBottom(duration = 300) {
       });
 
       const opacity = position.interpolate({
-          inputRange: [index - 1, index - 0.99, index],
-          outputRange: [0, 1, 1],
-        });
+        inputRange: [index - 1, index - 0.99, index],
+        outputRange: [0, 1, 1],
+      });
 
       return { opacity, transform: [{ translateY }] };
     },
   };
 }
 
-export function fadeIn(duration = 300) {
+export function fadeIn(duration: number = 300): TransitionConfig {
   return {
     transitionSpec: {
       duration,
@@ -129,7 +130,7 @@ export function fadeIn(duration = 300) {
   };
 }
 
-export function fadeOut(duration = 300) {
+export function fadeOut(duration: number = 300): TransitionConfig {
   return {
     transitionSpec: {
       duration,
@@ -142,7 +143,7 @@ export function fadeOut(duration = 300) {
 
       const opacity = position.interpolate({
         inputRange: [index - 1, index, index + 1],
-        outputRange: [0, 1, 0]
+        outputRange: [0, 1, 0],
       });
 
       return { opacity };
@@ -150,7 +151,7 @@ export function fadeOut(duration = 300) {
   };
 }
 
-export function zoomIn(duration = 300) {
+export function zoomIn(duration: number = 300): TransitionConfig {
   return {
     transitionSpec: {
       duration,
@@ -161,9 +162,9 @@ export function zoomIn(duration = 300) {
     screenInterpolator: ({ position, scene }) => {
       const { index } = scene;
       let start = 0;
-      
+
       if (Platform.OS !== 'ios') {
-        start = 0.005
+        start = 0.005;
       }
 
       const scale = position.interpolate({
@@ -176,7 +177,7 @@ export function zoomIn(duration = 300) {
   };
 }
 
-export function zoomOut(duration = 300) {
+export function zoomOut(duration: number = 300): TransitionConfig {
   return {
     transitionSpec: {
       duration,
@@ -197,7 +198,7 @@ export function zoomOut(duration = 300) {
   };
 }
 
-export function flipY(duration = 300) {
+export function flipY(duration: number = 300): TransitionConfig {
   return {
     transitionSpec: {
       duration,
@@ -218,7 +219,7 @@ export function flipY(duration = 300) {
   };
 }
 
-export function flipX(duration = 300) {
+export function flipX(duration: number = 300): TransitionConfig {
   return {
     transitionSpec: {
       duration,

@@ -3,9 +3,13 @@
   "version": "1.0.11",
   "description": "Custom transitions for react-navigation",
   "author": "Phil Mok",
-  "main": "src/index.js",
+  "main": "dist/index.js",
+  "module": "dist/transitions.esm.js",
+  "typings": "dist/index.d.ts",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "tsdx watch",
+    "build": "tsdx build",
+    "test": "tsdx test"
   },
   "repository": {
     "type": "git",
@@ -24,9 +28,31 @@
     "react-native": "*",
     "react-navigation": "*"
   },
+  "husky": {
+    "hooks": {
+      "pre-commit": "pretty-quick --staged"
+    }
+  },
+  "prettier": {
+    "printWidth": 80,
+    "semi": true,
+    "singleQuote": true,
+    "trailingComma": "es5"
+  },
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/plmok61/react-navigation-transitions/issues"
   },
-  "homepage": "https://github.com/plmok61/react-navigation-transitions#readme"
+  "homepage": "https://github.com/plmok61/react-navigation-transitions#readme",
+  "dependencies": {},
+  "devDependencies": {
+    "@types/react-native": "^0.60.0",
+    "@types/react-navigation": "^3.0.7",
+    "husky": "^3.0.0",
+    "prettier": "^1.18.2",
+    "pretty-quick": "^1.11.1",
+    "tsdx": "^0.7.2",
+    "tslib": "^1.10.0",
+    "typescript": "^3.5.3"
+  }
 }
