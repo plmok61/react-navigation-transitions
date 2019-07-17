@@ -4,6 +4,7 @@
   "description": "Custom transitions for react-navigation",
   "author": "Phil Mok",
   "main": "src/index.js",
+  "typings": "src/index.d.ts",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -28,5 +29,8 @@
   "bugs": {
     "url": "https://github.com/plmok61/react-navigation-transitions/issues"
   },
-  "homepage": "https://github.com/plmok61/react-navigation-transitions#readme"
+  "homepage": "https://github.com/plmok61/react-navigation-transitions#readme",
+  "devDependencies": {
+    "@types/react-navigation": "^3.0.7"
+  }
 }
