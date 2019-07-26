@@ -1,0 +1,11 @@
+import { TransitionConfig } from "react-navigation";
+export declare function fromLeft(duration?: number): TransitionConfig;
+export declare function fromTop(duration?: number): TransitionConfig;
+export declare function fromRight(duration?: number): TransitionConfig;
+export declare function fromBottom(duration?: number): TransitionConfig;
+export declare function fadeIn(duration?: number): TransitionConfig;
+export declare function fadeOut(duration?: number): TransitionConfig;
+export declare function zoomIn(duration?: number): TransitionConfig;
+export declare function zoomOut(duration?: number): TransitionConfig;
+export declare function flipY(duration?: number): TransitionConfig;
+export declare function flipX(duration?: number): TransitionConfig;
