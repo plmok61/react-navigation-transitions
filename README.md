@@ -16,6 +16,8 @@ These functions are meant to be used as the `transitionConfig` with [react-navig
 
 `fadeIn`
 
+`fadeout`
+
 `zoomIn`
 
 `zoomOut`
